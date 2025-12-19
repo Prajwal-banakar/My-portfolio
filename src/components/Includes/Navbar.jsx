@@ -26,13 +26,13 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed w-full z-50 transition-all duration-300 bg-black shadow-xl`}
+      className={`fixed w-full z-50 transition-all duration-300 bg-gradient-to-r from-blue-600 to-purple-600 shadow-xl`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <a href="#home" className="flex items-center">
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+              <span className="text-xl font-bold text-white">
                 Hey it's Me
               </span>
             </a>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <button
                   key={link.name}
                   onClick={() => redirect(link.href.substring(1))}
-                  className="flex items-center gap-1 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="flex items-center gap-1 text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                 >
                   {link.icon}
                   {link.name}
@@ -54,10 +54,10 @@ const Navbar = () => {
 
           <div className="hidden md:block">
             <a
-              href="/Resume.pdf"
+              href="https://drive.google.com/file/d/1Wj-ZU402STlLiafh5m9sdqZpb7bX8d4W/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="flex items-center bg-white text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Resume
             </a>
@@ -66,7 +66,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-blue-200 focus:outline-none"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -80,13 +80,13 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-white dark:bg-gray-900 shadow-lg`}>
+      <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="flex items-center gap-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+              className="flex items-center gap-2 text-white hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               onClick={toggleMenu}
             >
               {link.icon}
@@ -97,7 +97,7 @@ const Navbar = () => {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+            className="flex items-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
             onClick={toggleMenu}
           >
             Resume

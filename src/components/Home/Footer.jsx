@@ -29,17 +29,6 @@ const Footer = () => {
      
     ];
     
-    const footerLinks = [
-      {
-        title: "Services",
-        links: [
-          
-          { name: "Full Stack Solutions", url: "#services" },
-          { name: "Devops and cloud services", url: "#services" }
-        ]
-      }
-    ];
-    
     return (
       <footer className="bg-gray-50 dark:bg-gray-900 pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,25 +55,6 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-            
-            {footerLinks.map((column, idx) => (
-              <div key={idx}>
-                <h4 className="font-bold text-gray-900 dark:text-white mb-4">{column.title}</h4>
-                <ul className="space-y-2">
-                  {column.links.map((link, linkIdx) => (
-                    <li key={linkIdx}>
-                      <a 
-                        href={link.url} 
-                        className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center group"
-                      >
-                        <ChevronRight size={14} className="mr-1 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                        {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
           </div>
           
           <div className="border-t border-gray-200 dark:border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">

@@ -1,6 +1,5 @@
 import ContactSection from "./components/Home/Contact"
 import Footer from "./components/Home/Footer"
-import FreelancingServices from "./components/Home/Freelancing"
 import Hero from "./components/Home/Hero"
 import FeaturedProjects from "./components/Home/Projects"
 import SkillsAndServices from "./components/Home/Skills"
@@ -13,7 +12,6 @@ function App() {
       <Hero />
       <SkillsAndServices />
       <FeaturedProjects />
-      <FreelancingServices/>
       <ContactSection />
       <Footer/>
     </div>

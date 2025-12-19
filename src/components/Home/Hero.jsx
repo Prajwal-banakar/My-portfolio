@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, ArrowRight, Download } from 'lucide-react';
+import profileImage from '../../assets/profile.jpg';
 
 const Hero = () => {
   
@@ -41,7 +42,7 @@ const Hero = () => {
             </a>
             
             <a 
-              href="/Resume.pdf" 
+              href="https://drive.google.com/file/d/1Wj-ZU402STlLiafh5m9sdqZpb7bX8d4W/view?usp=drive_link"
               target="_blank"
               download
               rel="noopener noreferrer"
@@ -85,58 +86,12 @@ const Hero = () => {
           <div className="absolute w-72 h-72 bg-blue-500/20 dark:bg-blue-500/10 rounded-full blur-3xl"></div>
           <div className="absolute w-60 h-60 bg-purple-500/20 dark:bg-purple-500/10 rounded-full blur-3xl -translate-x-20 translate-y-20"></div>
           
-          <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 p-1 rounded-2xl shadow-xl w-full max-w-md">
-            <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden">
-              <div className="h-6 bg-gray-100 dark:bg-gray-700 flex items-center gap-1 px-3">
-                <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xl font-bold">
-                    PB
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 dark:text-white text-lg">Prajwal banakar</h3>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">Java fullStack Developer</p>
-                  </div>
-                </div>
-                
-                <div className="space-y-3">
-                  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3">
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                      <p className="font-medium text-gray-800 dark:text-gray-200">Java</p>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full w-11/12"></div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3">
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-                      <p className="font-medium text-gray-800 dark:text-gray-200">Spring boot</p>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-                      <div className="bg-purple-600 h-2 rounded-full w-4/5"></div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3">
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                      <p className="font-medium text-gray-800 dark:text-gray-200">DevOps</p>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-                      <div className="bg-green-600 h-2 rounded-full w-3/4"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="relative w-80 h-80">
+            <img
+              src={profileImage}
+              alt="Prajwal banakar"
+              className="rounded-full object-cover w-full h-full border-4 border-white dark:border-gray-800 shadow-xl"
+            />
           </div>
         </div>
       </div>
