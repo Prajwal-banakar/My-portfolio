@@ -1,4 +1,4 @@
-import { Send, Mail, Phone, Globe, MapPin } from 'lucide-react';
+import { Send, Mail, MapPin, Linkedin, Github } from 'lucide-react';
 import { useState } from 'react';
 import { handleError, handleSuccess } from '../Includes/Utils';
 
@@ -25,44 +25,24 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus(null);
-    setStatusMessage('');
 
-    try {
-      const url = `http://localhost:8080/contact`; 
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    // Construct mailto link
+    const mailtoLink = `mailto:prajwal.banakar18@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
 
-      if (!response.ok) {
-        throw new Error(`Server error: ${response.status} ${response.statusText}`);
-      }
+    // Open default email client
+    window.location.href = mailtoLink;
 
-      const result = await response.json();
+    setIsSubmitting(false);
+    setSubmitStatus('success');
+    setStatusMessage('Opening your email client...');
+    handleSuccess('Opening your email client...');
 
-      if (result.success === false) {
-        throw new Error(result.message || 'Failed to send message');
-      }
+    setFormData({ name: '', email: '', subject: '', message: '' });
 
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setSubmitStatus('success');
-      setStatusMessage(result.message || 'Message sent successfully!');
-      handleSuccess(result.message || 'Message sent successfully!');
-    } catch (error) {
-      setSubmitStatus('error');
-      setStatusMessage(error.message || 'There was an error sending your message. Please try again later.');
-      handleError(error.message || 'There was an error sending your message. Please try again later.');
-    } finally {
-      setIsSubmitting(false);
-      setTimeout(() => {
+    setTimeout(() => {
         setSubmitStatus(null);
         setStatusMessage('');
-      }, 5000);
-    }
+    }, 5000);
   };
 
   const contactMethods = [
@@ -70,25 +50,25 @@ const ContactSection = () => {
       icon: <Mail size={24} className="text-blue-600 dark:text-blue-400" />,
       title: 'Email',
       value: 'prajwal.banakar18@gmail.com',
-      link: '',
+      link: 'mailto:prajwal.banakar18@gmail.com',
     },
     {
-      icon: <Phone size={24} className="text-green-600 dark:text-green-400" />,
-      title: 'Phone',
-      value: '+91 8310484117',
-      link: 'tel:+91',
+      icon: <Linkedin size={24} className="text-blue-700 dark:text-blue-500" />,
+      title: 'LinkedIn',
+      value: 'Prajwal Banakar',
+      link: 'https://www.linkedin.com/in/prajwal-banakar',
+    },
+    {
+      icon: <Github size={24} className="text-gray-900 dark:text-gray-100" />,
+      title: 'GitHub',
+      value: 'Prajwal-banakar',
+      link: 'https://github.com/Prajwal-banakar',
     },
     {
       icon: <MapPin size={24} className="text-red-600 dark:text-red-400" />,
       title: 'Location',
       value: 'Bengaluru, Karnataka',
       link: null,
-    },
-    {
-      icon: <Globe size={24} className="text-purple-600 dark:text-purple-400" />,
-      title: 'Website',
-      value: '',
-      link: '',
     },
   ];
 
@@ -219,7 +199,7 @@ const ContactSection = () => {
                     <div>
                       <h4 className="font-medium text-gray-900 dark:text-white">{method.title}</h4>
                       {method.link ? (
-                        <a href={method.link} className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+                        <a href={method.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
                           {method.value}
                         </a>
                       ) : (

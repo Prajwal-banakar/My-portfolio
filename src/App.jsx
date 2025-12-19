@@ -1,3 +1,4 @@
+import Activities from "./components/Home/Activities"
 import ContactSection from "./components/Home/Contact"
 import Footer from "./components/Home/Footer"
 import Hero from "./components/Home/Hero"
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <SkillsAndServices />
       <FeaturedProjects />
+      <Activities />
       <ContactSection />
       <Footer/>
     </div>
