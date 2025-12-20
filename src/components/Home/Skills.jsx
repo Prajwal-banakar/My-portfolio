@@ -13,7 +13,7 @@ const SkillsAndServices = () => {
         { name: "JavaScript", level: 85 },
         { name: "Python", level: 80 },
         { name: "C++", level: 90 },
-        { name: "C", level: 95 }
+       // { name: "C", level: 95 }
       ]
     },
     {
@@ -22,9 +22,9 @@ const SkillsAndServices = () => {
       skills: [
         { name: "Spring", level: 85 },
         { name: "Spring boot", level: 90 },
-        { name: "Hibernate", level: 75 },
+        { name: "ORM [Hibernate]", level: 75 },
         { name: "Spring mvc", level: 85 },
-        { name: "Spring security", level: 80 }
+        { name: "React", level: 70 }
       ]
     },
     {
@@ -35,7 +35,7 @@ const SkillsAndServices = () => {
         { name: "Mangodb", level: 75 },
         { name: "sql", level: 85 },
         { name: "Postgresql", level: 70 },
-        { name: "oracle", level: 85 }
+        //{ name: "oracle", level: 85 }
       ]
     },
     {

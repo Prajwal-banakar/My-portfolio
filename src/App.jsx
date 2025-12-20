@@ -1,5 +1,6 @@
 import Activities from "./components/Home/Activities"
 import ContactSection from "./components/Home/Contact"
+import Education from "./components/Home/Education"
 import Footer from "./components/Home/Footer"
 import Hero from "./components/Home/Hero"
 import FeaturedProjects from "./components/Home/Projects"
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Hero />
       <SkillsAndServices />
+      <Education />
       <FeaturedProjects />
       <Activities />
       <ContactSection />

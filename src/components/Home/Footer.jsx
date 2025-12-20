@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
             <div className="lg:col-span-2">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Prajwal</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Prajwal Banakar</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md">
                 Java developer specializing in modern web technologies, AI integration, 
                 and creating exceptional digital experiences for businesses worldwide.

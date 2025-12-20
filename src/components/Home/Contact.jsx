@@ -50,7 +50,7 @@ const ContactSection = () => {
       icon: <Mail size={24} className="text-blue-600 dark:text-blue-400" />,
       title: 'Email',
       value: 'prajwal.banakar18@gmail.com',
-      link: 'mailto:prajwal.banakar18@gmail.com',
+      link: 'mailto:prajwal.banakara@gmail.com',
     },
     {
       icon: <Linkedin size={24} className="text-blue-700 dark:text-blue-500" />,

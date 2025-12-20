@@ -5,13 +5,13 @@ const Activities = () => {
     {
       title: "Java Coding Test",
       issuer: "Hackerrank",
-      description: "Comprehensive coding Test covering Java, OOP's and Fundamentals.",
+      description: "Earned Java (Basic) Certification from HackerRank by solving real-world coding challenges covering OOP and core Java fundamentals.",
       link: "https://www.hackerrank.com/certificates/iframe/ee77cbf9cd0f"
     },
     {
       title: "Advanced Java Skillup",
       issuer: "GeeksforGeeks",
-      description: "Comprehensive course covering Java, Spring, Spring Boot, Hibernate and Spring AI.",
+      description: "Comprehensive course covering Java, Collections, Multithreading, JDBC, Srevlets, JSP, Spring, Spring Boot, Hibernate, Spring Security and  Spring AI.",
       link: "https://media.geeksforgeeks.org/courses/certificates/8c3fa0fd3097ea68fcc4477905da6adc.pdf"
     }
   ];
